@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Vision</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="principio">
+        <header class="inicio">
+            <img src="img/logo.jpg" alt="Apple" width="70px">
+            <h1>Apple Vision Pro</h1>
+        </header>
+      
+        <main id="container" class="container">
+            <h1>Bienvenidos a la era de la realidad aumentada con el Apple Vision Pro</h1>
+            <button onclick="nextPage()" id="myButton">Continuar</button>
+        </main>
+    </div>
+
+    <script>
+        function nextPage() {
+            var container = document.getElementById('container');
+            container.addEventListener('transitionend', function(event) {
+                if (event.propertyName === 'opacity') {
+                    window.location.href = "inicio.html";
+                }
+            });
+            container.classList.add('fade-out');
+        }
+    </script>
+</body>
+</html>
